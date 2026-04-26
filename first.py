@@ -1,0 +1,2 @@
+print('Allah')
+print ("Bismillah")
