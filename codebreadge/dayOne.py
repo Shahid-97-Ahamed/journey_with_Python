@@ -54,19 +54,57 @@
 
 # Float
 
-marks =85.4
-print(marks)
+# marks =85.4
+# print(marks)
 
-bangla = 45.7
-Math = 58.6
-print(bangla+Math)
+# bangla = 45.7
+# Math = 58.6
+# print(bangla+Math)
 
-Chemistry =87
-Physics =50
-print(Chemistry * Physics)
+# Chemistry =87
+# Physics =50
+# print(Chemistry * Physics)
 
-biology =85.25
-print(round(biology))
+# biology =85.25
+# print(round(biology))
 
-H_math = 45.23
-print(int(H_math))
+# H_math = 45.23
+# print(int(H_math))
+
+# Boolean
+
+# print(True,False)
+
+# x = 10
+# y = 5
+# if x > y:
+#     print(True)
+# else:
+#     print(False)
+
+# x = 5
+# y = 10
+
+# if x == y:
+#     print(True)
+# else:
+#     print(False)
+
+# age =31
+# has_id =True
+
+# if age >= 25 and has_id:
+#     print("You can Enter....")
+
+    # how to work input ................
+
+    # user_input =input("Please enter your name: ")
+    # print("Your Name:",user_input)
+
+num_one = 5
+num_two = 10
+is_true = True
+
+if num_one + num_two == 15 or is_true == True:
+    print("You cann..........ffdffdg")
+ 
