@@ -70,7 +70,7 @@
 
 # H_math = 45.23
 # print(int(H_math))
-
+""
 # Boolean
 
 # print(True,False)
@@ -101,10 +101,35 @@
     # user_input =input("Please enter your name: ")
     # print("Your Name:",user_input)
 
-num_one = 5
-num_two = 10
-is_true = True
+# num_one = 5
+# num_two = 10
+# is_true = True
 
-if num_one + num_two == 15 or is_true == True:
-    print("You cann..........ffdffdg")
- 
+# if num_one + num_two == 15 or is_true == True:
+#     print("You cann..........ffdffdg")
+
+# None
+
+# x = None
+# if x == None:
+#     print("X has no value!!!!!!!!!!1")
+
+# check_value = None
+# if check_value is None:
+#     print("You said right ans..............")
+
+# x = None
+# print(x)
+
+# value = None
+# # print(value)
+
+# value =42
+# print(value)
+
+# x = None
+
+# # print(x is None)
+
+# if x is None:
+#     print("No value yet......")
