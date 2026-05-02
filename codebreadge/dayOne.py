@@ -28,28 +28,45 @@
 
 # 3. Integer
 
-x = 10
-y = 20
-print(x+y)
+# x = 10
+# y = 20
+# print(x+y)
 
-x = 20
-y = 32
-print(x-y)
+# x = 20
+# y = 32
+# print(x-y)
 
-x = 32
-y = 55
-print(x/y)
+# x = 32
+# y = 55
+# print(x/y)
 
-x = 25
-y= 5
-print(x/y)
+# x = 25
+# y= 5
+# print(x/y)
 
-x = 100
-y = 25
+# x = 100
+# y = 25
 
-if x % 2 == 0:
-    print("Even Number")
-else:
-    print("ODD Number")
+# if x % 2 == 0:
+#     print("Even Number")
+# else:
+#     print("ODD Number")
 
+# Float
 
+marks =85.4
+print(marks)
+
+bangla = 45.7
+Math = 58.6
+print(bangla+Math)
+
+Chemistry =87
+Physics =50
+print(Chemistry * Physics)
+
+biology =85.25
+print(round(biology))
+
+H_math = 45.23
+print(int(H_math))
