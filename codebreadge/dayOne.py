@@ -133,3 +133,30 @@
 
 # if x is None:
 #     print("No value yet......")
+
+# 7. Multiple Type Together
+
+name = "Age"
+age = 20
+
+print(name,age)
+
+name = "Ashik"
+print("Hello!!!"+name)
+
+num_int =32
+num_float =35.65
+name ="Rakib"
+
+print(num_int,num_float,name,sep=" |")
+
+name ="Alina"
+age = 2.5
+height =2.1
+
+# print("Name:",name,"Age:",age,"Height:",height)
+# print(f"{name} is {age} years old and {height} feet tall")
+print(name + " is " + str(age) + " years old and " + str(height) + " feet tall.")
+
+
+
