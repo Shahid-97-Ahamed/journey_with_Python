@@ -249,3 +249,27 @@
 # print(" ".join(numbers_str))
 
 # formet approch
+
+# text ="Hello {}".format("world")
+# print(text)
+
+# name ="Shahid"
+# age =31
+
+# print("My name is {} and I am {} years old".format(name,age))
+
+# price = 3.1554
+# print("Price: {:.4f}".format(price))
+
+# a =20
+# b =30
+# c =50
+
+# print("value are  {},{} and {}".format(a,b,c))
+# name="Ashok"
+# city="Saitama"
+# sentance ="This is {}.I am from {}".format(name,city)
+# print(sentance)
+
+# print("{1} is after {0}".format("one", "two"))
+
