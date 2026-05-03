@@ -177,3 +177,27 @@
 
 # product_name =input("Input Your Products Name:")
 # print(len(product_name))
+
+# Typecasting
+
+# number ="123"
+# num = int(number)
+# print(num)
+
+# x = 10
+# y = float(x)
+
+# print(y)
+
+# type_one = 10.5
+# type_two =str(type_one)
+# print(type_one)
+
+# product_price =int(input("Input Your Price:"))
+# print(product_price)
+
+# num_one = float(input("Enter first Number: "))
+# num_two = float(input("Enter Second Number: "))
+
+# total = round(num_one + num_two)
+# print("Your Total Value is:", total)
