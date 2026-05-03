@@ -201,3 +201,17 @@
 
 # total = round(num_one + num_two)
 # print("Your Total Value is:", total)
+
+# comment
+
+#Ask the user to enter the  first number
+num1 =float(input("Enter the number:")) #Customer give you input
+
+#Ask the user to enter the Second Number
+num2 =float(input("Enter the Second  Number:"))
+
+#Add the  two numbers
+total =num1 + num2
+
+#print the Result
+print("The Sum is:",total) #this one give you final result
