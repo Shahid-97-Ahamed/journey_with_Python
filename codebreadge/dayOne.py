@@ -204,14 +204,30 @@
 
 # comment
 
-#Ask the user to enter the  first number
-num1 =float(input("Enter the number:")) #Customer give you input
+# #Ask the user to enter the  first number
+# num1 =float(input("Enter the number:")) #Customer give you input
 
-#Ask the user to enter the Second Number
-num2 =float(input("Enter the Second  Number:"))
+# #Ask the user to enter the Second Number
+# num2 =float(input("Enter the Second  Number:"))
 
-#Add the  two numbers
-total =num1 + num2
+# #Add the  two numbers
+# total =num1 + num2
 
-#print the Result
-print("The Sum is:",total) #this one give you final result
+# #print the Result
+# print("The Sum is:",total) #this one give you final result
+
+# Concetination
+
+# first_name ="Ahamed"
+# last_name ="Shahid"
+# print(last_name+" "+first_name)
+
+# number=25
+# print("Number:"+str(number))
+
+# user_name =input("Enter Your name:")
+# user_age =str(input("Enter your Age:"))
+# user_country=input("Enter Your Country Name:")
+
+# sentance ="My name is "+user_name+".I am "+user_age+" years old"+".My Country name Is "+user_country.capitalize()
+# print(sentance)

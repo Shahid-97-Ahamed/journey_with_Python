@@ -1,2 +1,6 @@
-product_price =int(input("Input Your Price:"))
-print(product_price)
+first_name ="Ahamed"
+# last_name ="Shahid"
+# print(last_name+" "+first_name)
+
+# number=25
+# print("Number:"+str(number))
