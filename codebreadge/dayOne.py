@@ -231,3 +231,21 @@
 
 # sentance ="My name is "+user_name+".I am "+user_age+" years old"+".My Country name Is "+user_country.capitalize()
 # print(sentance)
+
+# join approch
+
+# words =["Hello","World"]
+# result =" ".join(words)
+# print(result)
+
+# name =["Shahid","Ahamed","Rabbi"]
+# print(",".join(name))
+
+# numbers =[1,2,3]
+
+# #convert numbers to string
+# numbers_str =[str(n) for n in numbers]
+
+# print(" ".join(numbers_str))
+
+# formet approch
