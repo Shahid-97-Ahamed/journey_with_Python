@@ -136,27 +136,44 @@
 
 # 7. Multiple Type Together
 
-name = "Age"
-age = 20
+# name = "Age"
+# age = 20
 
-print(name,age)
+# print(name,age)
 
-name = "Ashik"
-print("Hello!!!"+name)
+# name = "Ashik"
+# print("Hello!!!"+name)
 
-num_int =32
-num_float =35.65
-name ="Rakib"
+# num_int =32
+# num_float =35.65
+# name ="Rakib"
 
-print(num_int,num_float,name,sep=" |")
+# print(num_int,num_float,name,sep=" |")
 
-name ="Alina"
-age = 2.5
-height =2.1
+# name ="Alina"
+# age = 2.5
+# height =2.1
 
-# print("Name:",name,"Age:",age,"Height:",height)
-# print(f"{name} is {age} years old and {height} feet tall")
-print(name + " is " + str(age) + " years old and " + str(height) + " feet tall.")
+# # print("Name:",name,"Age:",age,"Height:",height)
+# # print(f"{name} is {age} years old and {height} feet tall")
+# print(name + " is " + str(age) + " years old and " + str(height) + " feet tall.")
 
 
+# 8. User Input
 
+# users_name =input("Please input Your name: ")
+# print("Users_name:",users_name)
+
+# age =input("Input Your age:")
+# print("Users age:",age)
+
+# num_one = int(input("Give Me First Number:"))
+# num_Two =int(input("Give Me Second Number:"))
+# sum =num_one + num_Two
+# print("Your Total value:",sum)
+
+# users_name =input("Give me Your name:")
+# print(users_name.upper())
+
+# product_name =input("Input Your Products Name:")
+# print(len(product_name))
