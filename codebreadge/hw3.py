@@ -41,3 +41,21 @@
 # print(text1.isupper())
 # print(text2.isalnum())
 # print(text3.isdigit())
+
+# x="Programming"
+# print(x[0])
+# print(x[-1])
+# print(x[3:7])
+# print(x[:7])
+
+
+# x[2:5]
+# x[:5]
+# x[2:]
+
+"""
+ x[2:5] its means x start from index 2 and ends index 5
+ x[:5] its means x start from beginning and end index 5
+ x[2:] its means x start from index 2 and goes until the end
+
+"""
