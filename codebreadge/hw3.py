@@ -60,9 +60,24 @@
 
 """
 
-user_input =input("Enter your comments:")
-print("Sentance_length:",len(user_input))
-print(user_input[0])
-print(user_input[-1])
-print(user_input.upper())
-print(user_input.lower())
+# user_input =input("Enter your comments:")
+# print("Sentance_length:",len(user_input))
+# print(user_input[0])
+# print(user_input[-1])
+# print(user_input.upper())
+# print(user_input.lower())
+
+# name ="Rocky"
+# age =25
+
+# # Concatenation 
+# print("Hello I am "+name+".I am "+str(age)+" years old.")
+# # - .format() 
+# print("Hello I am {}.I am {} years old.".format(name,age))
+# # - f-string 
+# print(f"Hello I am {name}.I am {age} years old.")
+
+x = 10
+x = x+5
+x = "Hello"
+print(x)
