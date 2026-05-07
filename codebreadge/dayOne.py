@@ -272,4 +272,41 @@
 # print(sentance)
 
 # print("{1} is after {0}".format("one", "two"))
+# Assign value and change it
+# Variable Override
+# x =10
+# print(x)
+
+# x=20
+# print(x)
+
+#  Store number and update it
+# num =5
+# num =num+2
+# print(num)
+
+
+
+
+# text = "Hello world, how are you doing?"
+# new_text = text.replace("world", "Mahfuz bhai") # Replace a substring 
+# new_text = text.strip() # Removing white space from a string both side
+# new_text = text.lstrip() # Removing white space from left side of a string 
+# new_text = text.rstrip() # Removing white space from right side 
+# new_text = text.startswith("Hello") # Checks if a string starts with a substring
+# new_text = text.find("world") # returns a strting position of a substring
+# print(new_text)
+
+
+text ="             Hello world, how are you doing?      "
+# new_text =text.replace("Hello","Shahid ")
+# new_text =text.strip()
+new_text =text.lstrip()
+# new_text =text.startswith("abiudsjb")
+# new_text =text.find("how")
+# new_text =text.count("how")
+
+
+
+print(new_text)
 
