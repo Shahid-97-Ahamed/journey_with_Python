@@ -59,3 +59,10 @@
  x[2:] its means x start from index 2 and goes until the end
 
 """
+
+user_input =input("Enter your comments:")
+print("Sentance_length:",len(user_input))
+print(user_input[0])
+print(user_input[-1])
+print(user_input.upper())
+print(user_input.lower())
