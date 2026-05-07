@@ -77,7 +77,16 @@
 # # - f-string 
 # print(f"Hello I am {name}.I am {age} years old.")
 
-x = 10
-x = x+5
-x = "Hello"
-print(x)
+# x = 10
+# x = x+5
+# x = "Hello"
+# print(x)
+
+
+# 14. Difference between: isalpha() vs isalnum()
+"""
+isalpha() is check is this is Alpabhate
+and
+isalnum() is check is this Alpabhabet and number
+"""
+
