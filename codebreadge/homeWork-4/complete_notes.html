@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Study Notes — Python + Dev Toolkit + Software Engineering</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:#fdf9f0; --ink:#2c2416; --ink2:#4a3f2f;
+  --teal:#1a7a6e; --teal-l:#e0f5f2;
+  --coral:#e85d3a; --coral-l:#fdeee9;
+  --amber:#d4860a; --amber-l:#fef3d8;
+  --blue:#2b5fa3; --blue-l:#e8f0fc;
+  --green:#3a7a3a; --green-l:#e8f5e8;
+  --purple:#6b3fa0; --purple-l:#f0e8fc;
+  --pink:#b03060; --pink-l:#fce8ef;
+  --line:#e8dcc8; --sh:rgba(44,36,22,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#cec5b0;font-family:'Kalam',cursive;color:var(--ink);padding:20px 14px 60px;}
+
+/* notebook */
+.nb{
+  background:var(--paper);
+  background-image:repeating-linear-gradient(transparent,transparent 31px,#d6cbb5 31px,#d6cbb5 32px);
+  background-position:0 44px;
+  border-radius:6px;
+  box-shadow:3px 3px 14px var(--sh),-1px -1px 4px var(--sh);
+  margin:0 auto 26px;max-width:880px;
+  padding:50px 38px 42px 74px;position:relative;
+}
+.nb::before{content:'';position:absolute;left:56px;top:0;bottom:0;width:2px;background:rgba(220,80,60,.35);}
+.nb::after{content:'';position:absolute;left:16px;top:40px;bottom:40px;width:20px;
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 28px,#c8b89a 28px,#c8b89a 44px);
+  border-radius:3px;}
+
+/* cover banner */
+.banner{background:var(--ink);color:#e8dcc8;border-radius:8px;padding:18px 22px;margin-bottom:20px;text-align:center;}
+.banner h1{font-family:'Caveat',cursive;font-size:30px;font-weight:700;line-height:1.3;color:#f5e97a;}
+.banner p{font-family:'Patrick Hand',cursive;font-size:13px;letter-spacing:.07em;margin-top:6px;color:#aac8e0;}
+.toc-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px;}
+.toc-pill{padding:4px 14px;border-radius:99px;font-family:'Patrick Hand',cursive;font-size:12px;font-weight:700;cursor:default;}
+
+/* section divider */
+.sec-div{background:var(--ink);color:#f5e97a;font-family:'Caveat',cursive;font-size:20px;font-weight:700;
+  padding:8px 18px;border-radius:6px;margin:0 0 18px;display:inline-block;}
+
+/* headings */
+.ptitle{font-family:'Caveat',cursive;font-size:28px;font-weight:700;border-bottom:3px solid;padding-bottom:5px;margin-bottom:4px;}
+.psub{font-family:'Patrick Hand',cursive;font-size:12px;letter-spacing:.06em;color:var(--ink2);margin-bottom:18px;}
+.sh{font-family:'Caveat',cursive;font-size:20px;font-weight:700;display:flex;align-items:center;gap:9px;margin:20px 0 10px;}
+.sh .num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;color:white;}
+
+/* concept boxes */
+.cb{border-radius:8px;padding:12px 14px;margin-bottom:10px;border-left:4px solid;}
+.cb .lbl{font-family:'Patrick Hand',cursive;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px;}
+.cb .ct{font-family:'Caveat',cursive;font-size:17px;font-weight:700;margin-bottom:3px;}
+.cb p,.cb ul li{font-size:13px;line-height:1.75;color:var(--ink2);}
+.cb ul{padding-left:16px;}
+
+/* color helpers */
+.tl{color:var(--teal);} .cl{color:var(--coral);} .al{color:var(--amber);}
+.bl{color:var(--blue);} .gl{color:var(--green);} .pl{color:var(--purple);}
+.pkl{color:var(--pink);}
+.bg-tl{background:var(--teal);} .bg-cl{background:var(--coral);} .bg-al{background:var(--amber);}
+.bg-bl{background:var(--blue);} .bg-gl{background:var(--green);} .bg-pl{background:var(--purple);}
+.bg-pkl{background:var(--pink);}
+.tl-b{background:var(--teal-l);border-color:var(--teal);}
+.cl-b{background:var(--coral-l);border-color:var(--coral);}
+.al-b{background:var(--amber-l);border-color:var(--amber);}
+.bl-b{background:var(--blue-l);border-color:var(--blue);}
+.gl-b{background:var(--green-l);border-color:var(--green);}
+.pl-b{background:var(--purple-l);border-color:var(--purple);}
+.pkl-b{background:var(--pink-l);border-color:var(--pink);}
+
+/* code */
+.code{background:#2c2416;border-radius:6px;padding:11px 13px;font-family:'Courier New',monospace;
+  font-size:12px;line-height:1.85;color:#e8dcc8;margin:7px 0;white-space:pre;overflow-x:auto;}
+.ck{color:#b07fe8;font-weight:700;} .cs{color:#7ec87e;} .cn{color:#f0c060;} .cc{color:#888;font-style:italic;}
+.hl{background:#ffe082;padding:1px 5px;border-radius:3px;font-family:'Courier New',monospace;font-size:12px;color:var(--ink);}
+
+/* grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0;}
+.tbl th{background:var(--ink);color:#e8dcc8;padding:6px 9px;text-align:left;font-family:'Patrick Hand',cursive;font-size:11px;letter-spacing:.06em;}
+.tbl td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6;}
+.tbl tr:nth-child(even){background:rgba(0,0,0,.03);}
+.tbl code{font-family:'Courier New',monospace;font-size:12px;background:#f0e8d8;padding:1px 5px;border-radius:3px;color:var(--teal);}
+
+/* cards */
+.card{background:white;border:1px solid var(--line);border-radius:8px;padding:12px 13px;}
+.card .ci{font-size:20px;margin-bottom:5px;}
+.card .ct2{font-family:'Caveat',cursive;font-size:16px;font-weight:700;margin-bottom:5px;}
+.card ul{padding-left:15px;}
+.card ul li{font-size:12px;line-height:1.8;color:var(--ink2);}
+
+/* important / warn */
+.imp{background:#fff3cd;border:2px dashed var(--amber);border-radius:8px;padding:11px 15px;margin:12px 0;font-size:13px;line-height:1.7;}
+.imp .it{font-family:'Caveat',cursive;font-size:17px;font-weight:700;color:var(--amber);margin-bottom:3px;}
+.warn{background:#fff8e1;border-left:4px solid var(--coral);border-radius:0 8px 8px 0;padding:11px 15px;margin:12px 0;font-size:13px;line-height:1.7;}
+
+/* SDLC timeline */
+.sdlc{display:flex;align-items:flex-start;gap:0;margin:12px 0;overflow-x:auto;padding-bottom:6px;}
+.ph{display:flex;flex-direction:column;align-items:center;flex:1;min-width:80px;}
+.ph-c{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;background:white;border:2px solid;margin:0 auto;}
+.ph-n{font-family:'Caveat',cursive;font-size:13px;font-weight:700;text-align:center;margin-top:4px;}
+.ph-s{font-family:'Patrick Hand',cursive;font-size:10px;text-align:center;color:var(--ink2);margin-top:1px;}
+.arr{padding-top:10px;color:var(--ink2);font-size:16px;flex-shrink:0;}
+
+/* flowchart */
+.fc{display:flex;flex-direction:column;align-items:center;gap:3px;padding:14px;background:white;border-radius:8px;border:1px solid var(--line);margin:8px 0;}
+.fc-oval{background:var(--teal);color:white;border-radius:30px;padding:5px 22px;font-family:'Caveat',cursive;font-size:15px;font-weight:700;}
+.fc-rect{background:var(--amber-l);border:2px solid var(--amber);padding:5px 18px;font-family:'Caveat',cursive;font-size:14px;text-align:center;min-width:160px;}
+.fc-diam{background:var(--coral-l);border:2px solid var(--coral);font-family:'Caveat',cursive;font-size:13px;
+  clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);width:180px;height:55px;display:flex;align-items:center;justify-content:center;}
+.fc-para{background:var(--blue-l);border:2px solid var(--blue);padding:5px 18px;font-family:'Caveat',cursive;font-size:14px;text-align:center;min-width:160px;transform:skewX(-8deg);}
+.fc-ar{font-size:16px;color:var(--ink2);}
+.fc-row{display:flex;align-items:center;gap:10px;}
+.fc-lb{font-family:'Caveat',cursive;font-size:12px;color:var(--coral);}
+
+hr.dv{border:none;border-top:2px dashed var(--line);margin:18px 0;}
+
+/* scrum */
+.sc-item{display:flex;gap:7px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:13px;line-height:1.6;align-items:flex-start;}
+.sc-key{font-family:'Caveat',cursive;font-size:14px;font-weight:700;flex-shrink:0;min-width:130px;}
+
+/* algo steps */
+.as{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.as .sn{width:26px;height:26px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Patrick Hand',cursive;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px;}
+.as .st{font-family:'Caveat',cursive;font-size:16px;font-weight:700;color:var(--teal);margin-bottom:1px;}
+.as .sd{font-size:13px;color:var(--ink2);line-height:1.6;}
+
+/* shapes */
+.shape-row{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0;}
+.shp{flex:1;min-width:120px;background:white;border:1px solid var(--line);border-radius:8px;padding:10px;text-align:center;}
+.shp .si{font-size:24px;margin-bottom:4px;}
+.shp .sn2{font-family:'Caveat',cursive;font-size:15px;font-weight:700;color:var(--teal);margin-bottom:2px;}
+.shp .sd2{font-size:11px;color:var(--ink2);line-height:1.5;}
+
+/* summary mini cards */
+.smr{flex:1;min-width:120px;background:white;border:1px solid var(--line);border-radius:8px;padding:9px 11px;text-align:center;}
+.smr .sb{font-family:'Caveat',cursive;font-size:20px;font-weight:700;}
+.smr .ss{font-size:11px;color:var(--ink2);}
+
+@media(max-width:640px){
+  .g2,.g3,.g4{grid-template-columns:1fr;}
+  .nb{padding:42px 16px 30px 50px;}
+  .sdlc{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ COVER PAGE ══════════════════════ -->
+<div class="nb">
+  <div class="banner">
+    <h1>📓 Complete Study Notes</h1>
+    <p>PYTHON BASICS · DEVELOPER'S TOOLKIT · SOFTWARE ENGINEERING</p>
+    <div class="toc-row">
+      <span class="toc-pill" style="background:#1a7a6e;color:white;">🐍 Python Conditionals</span>
+      <span class="toc-pill" style="background:#2b5fa3;color:white;">🔄 SDLC</span>
+      <span class="toc-pill" style="background:#6b3fa0;color:white;">📁 File System</span>
+      <span class="toc-pill" style="background:#e85d3a;color:white;">💻 Terminal</span>
+      <span class="toc-pill" style="background:#3a7a3a;color:white;">🔷 Flowcharts</span>
+      <span class="toc-pill" style="background:#d4860a;color:white;">⚙️ Algorithms</span>
+      <span class="toc-pill" style="background:#b03060;color:white;">🤖 AI Era</span>
+      <span class="toc-pill" style="background:#2c2416;color:#f5e97a;">👷 Responsibilities</span>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
+    <div class="smr"><div class="sb tl">🐍</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">Python</div><div class="ss">Conditionals & Logic</div></div>
+    <div class="smr"><div class="sb bl">📁</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">File System</div><div class="ss">Paths & Structure</div></div>
+    <div class="smr"><div class="sb cl">💻</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">Terminal</div><div class="ss">Commands</div></div>
+    <div class="smr"><div class="sb gl">🔷</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">Flowcharts</div><div class="ss">Logic Diagrams</div></div>
+    <div class="smr"><div class="sb al">⚙️</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">Algorithms</div><div class="ss">Step-by-step</div></div>
+    <div class="smr"><div class="sb pl">🔄</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">SDLC</div><div class="ss">Dev Lifecycle</div></div>
+    <div class="smr"><div class="sb pkl">🤖</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">AI Era</div><div class="ss">Modern Dev</div></div>
+    <div class="smr"><div class="sb" style="color:var(--ink);">👷</div><div style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;">Roles</div><div class="ss">SE Responsibilities</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ PART 1: PYTHON ══════════════════════ -->
+<div class="nb">
+  <div class="sec-div">🐍 Part 1 — Python Conditionals & Logical Operators</div>
+
+  <!-- input() -->
+  <div class="sh"><span class="num bg-tl">1</span><span class="tl">input() — ব্যবহারকারীর কাছ থেকে তথ্য নেওয়া</span></div>
+  <div class="g3">
+    <div class="cb tl-b"><div class="lbl tl">String</div><div class="ct">Text / yes/no</div>
+      <div class="code"><span class="cs">name</span> = input(<span class="cs">"Name: "</span>)
+<span class="cs">status</span> = input(<span class="cs">"yes/no: "</span>).lower()</div>
+    </div>
+    <div class="cb tl-b"><div class="lbl tl">Integer</div><div class="ct">বয়স / marks</div>
+      <div class="code"><span class="cs">age</span> = <span class="ck">int</span>(input(<span class="cs">"Age: "</span>))
+<span class="cs">marks</span> = <span class="ck">int</span>(input(<span class="cs">"Marks: "</span>))</div>
+    </div>
+    <div class="cb tl-b"><div class="lbl tl">Float</div><div class="ct">CGPA / bill</div>
+      <div class="code"><span class="cs">cgpa</span> = <span class="ck">float</span>(input(<span class="cs">"CGPA: "</span>))
+<span class="cs">bill</span> = <span class="ck">float</span>(input(<span class="cs">"Bill: "</span>))</div>
+    </div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- if/elif/else -->
+  <div class="sh"><span class="num bg-bl">2</span><span class="bl">if / elif / else — শর্ত</span></div>
+  <div class="g2">
+    <div>
+      <div class="cb bl-b"><div class="lbl bl">Structure</div><div class="ct">গঠন</div>
+        <div class="code"><span class="ck">if</span> শর্ত১:
+    <span class="cc"># শর্ত১ True হলে</span>
+<span class="ck">elif</span> শর্ত২:
+    <span class="cc"># শর্ত২ True হলে</span>
+<span class="ck">else</span>:
+    <span class="cc"># কোনোটাই না হলে</span></div>
+      </div>
+      <div class="imp"><div class="it">⚠️ মনে রাখো</div>
+        শর্তের পরে <span class="hl">:</span> দিতে হবে। ভেতরে <span class="hl">4 space</span> দিতে হবে। <span class="hl">else</span>-এ কোনো condition লেখা যায় না!
+      </div>
+    </div>
+    <div class="cb bl-b"><div class="lbl bl">Grade Example</div><div class="ct">উদাহরণ</div>
+      <div class="code"><span class="cs">marks</span> = <span class="ck">float</span>(input(<span class="cs">"Marks: "</span>))
+<span class="ck">if</span> marks >= <span class="cn">90</span>:
+    <span class="ck">print</span>(<span class="cs">"A+"</span>)
+<span class="ck">elif</span> marks >= <span class="cn">80</span>:
+    <span class="ck">print</span>(<span class="cs">"A"</span>)
+<span class="ck">elif</span> marks >= <span class="cn">70</span>:
+    <span class="ck">print</span>(<span class="cs">"B"</span>)
+<span class="ck">elif</span> marks >= <span class="cn">60</span>:
+    <span class="ck">print</span>(<span class="cs">"C"</span>)
+<span class="ck">else</span>:
+    <span class="ck">print</span>(<span class="cs">"F"</span>)</div>
+    </div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- ternary -->
+  <div class="sh"><span class="num bg-al">3</span><span class="al">Ternary Operator — এক লাইনে if/else</span></div>
+  <div class="g2">
+    <div class="cb al-b"><div class="lbl al">Structure</div><div class="ct">গঠন</div>
+      <div class="code">value = <span class="cs">"A"</span> <span class="ck">if</span> শর্ত <span class="ck">else</span> <span class="cs">"B"</span></div>
+      <p style="font-size:13px;color:var(--ink2);margin-top:6px;">শুধু ২টি option → Ternary ✅<br>৩+ option → if/elif/else ✅</p>
+    </div>
+    <div class="cb al-b"><div class="lbl al">Example</div><div class="ct">উদাহরণ</div>
+      <div class="code"><span class="cs">age</span> = <span class="ck">int</span>(input(<span class="cs">"Age: "</span>))
+status = <span class="cs">"Eligible"</span> <span class="ck">if</span> age >= <span class="cn">18</span> <span class="ck">else</span> <span class="cs">"Not Eligible"</span>
+<span class="ck">print</span>(status)</div>
+    </div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- logical operators -->
+  <div class="sh"><span class="num bg-gl">4</span><span class="gl">Logical Operators — and / or / not</span></div>
+  <div class="g3">
+    <div class="cb gl-b"><div class="lbl gl">and — এবং</div><div class="ct">দুটোই True হলে</div>
+      <div class="code"><span class="ck">if</span> age >= <span class="cn">18</span> <span class="ck">and</span> has_id:
+    <span class="ck">print</span>(<span class="cs">"Entry ✅"</span>)</div>
+      <p style="font-size:12px;color:var(--ink2);margin-top:5px;">True AND True = True<br>True AND False = False</p>
+    </div>
+    <div class="cb gl-b"><div class="lbl gl">or — অথবা</div><div class="ct">যেকোনো একটি True</div>
+      <div class="code"><span class="ck">if</span> is_student <span class="ck">or</span> is_senior:
+    <span class="ck">print</span>(<span class="cs">"Discount ✅"</span>)</div>
+      <p style="font-size:12px;color:var(--ink2);margin-top:5px;">True OR False = True<br>False OR False = False</p>
+    </div>
+    <div class="cb gl-b"><div class="lbl gl">not — না / উল্টো</div><div class="ct">True→False, False→True</div>
+      <div class="code"><span class="ck">if not</span> is_raining:
+    <span class="ck">print</span>(<span class="cs">"Go outside ☀️"</span>)</div>
+      <p style="font-size:12px;color:var(--ink2);margin-top:5px;">not True = False<br>not False = True</p>
+    </div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- string methods -->
+  <div class="sh"><span class="num bg-pl">5</span><span class="pl">String Methods — লেখা নিয়ে কাজ</span></div>
+  <table class="tbl">
+    <tr><th>Method</th><th>কাজ</th><th>উদাহরণ</th><th>Result</th></tr>
+    <tr><td><code>len(x)</code></td><td>কতটি character</td><td><code>len("Shahid")</code></td><td>6</td></tr>
+    <tr><td><code>x.isalpha()</code></td><td>শুধু অক্ষর কিনা</td><td><code>"hello".isalpha()</code></td><td>True</td></tr>
+    <tr><td><code>x.lower()</code></td><td>ছোট হাতে</td><td><code>"YES".lower()</code></td><td>"yes"</td></tr>
+    <tr><td><code>x.capitalize()</code></td><td>প্রথম অক্ষর বড়</td><td><code>"japan".capitalize()</code></td><td>"Japan"</td></tr>
+    <tr><td><code>x.endswith(".com")</code></td><td>শেষে .com কিনা</td><td><code>"a@b.com".endswith(".com")</code></td><td>True</td></tr>
+    <tr><td><code>x.startswith("260")</code></td><td>260 দিয়ে শুরু কিনা</td><td><code>"2601".startswith("260")</code></td><td>True</td></tr>
+    <tr><td><code>"@" in x</code></td><td>@ আছে কিনা</td><td><code>"@" in "a@b.com"</code></td><td>True</td></tr>
+    <tr><td><code>round(x, 2)</code></td><td>দশমিক ঠিক করা</td><td><code>round(4500.001, 2)</code></td><td>4500.0</td></tr>
+  </table>
+
+  <hr class="dv">
+
+  <!-- % to decimal -->
+  <div class="sh"><span class="num bg-pkl">6</span><span class="pkl">Percentage → Decimal — % হিসাব</span></div>
+  <div class="g2">
+    <div class="cb pkl-b"><div class="lbl pkl">Rule</div><div class="ct">নিয়ম</div>
+      <p>% ÷ 100 = decimal<br>90% = 0.90 | 10% = 0.10 | 30% = 0.30</p>
+      <div class="code">bill = <span class="cn">5000</span>
+final = bill * <span class="cn">0.90</span>  <span class="cc"># 10% ছাড়</span>
+<span class="cc"># = 5000 × 90/100 = 4500</span></div>
+    </div>
+    <div class="cb pkl-b"><div class="lbl pkl">Common Uses</div><div class="ct">homework-এ</div>
+      <div class="code">bill * <span class="cn">0.90</span>   <span class="cc"># 10% discount</span>
+salary * <span class="cn">0.30</span> <span class="cc"># 30% tax</span>
+amount * <span class="cn">0.97</span> <span class="cc"># 3% discount</span>
+amount * <span class="cn">0.98</span> <span class="cc"># 2% discount</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ PART 2: CLASS 2 ══════════════════════ -->
+<div class="nb">
+  <div class="sec-div">🛠️ Part 2 — The Developer's Toolkit (Class 2)</div>
+
+  <!-- File System -->
+  <div class="sh"><span class="num bg-tl">7</span><span class="tl">File System — ফাইল সিস্টেম</span></div>
+  <div class="g3">
+    <div class="cb tl-b"><div class="lbl tl">Concept 01</div><div class="ct">File System কী?</div>
+      <p>OS যেভাবে disk-এ file store, organize, retrieve করে। Library catalog-এর মতো।</p></div>
+    <div class="cb tl-b"><div class="lbl tl">Concept 02</div><div class="ct">Tree Structure</div>
+      <p>উল্টো গাছের মতো। সবার উপরে <span class="hl">Root</span>। নিচে folder → subfolder → file।</p></div>
+    <div class="cb tl-b"><div class="lbl tl">Concept 03</div><div class="ct">Paths</div>
+      <p>প্রতিটি file-এর "ঠিকানা"। Root থেকে destination পর্যন্ত।</p></div>
+  </div>
+
+  <div class="g2" style="margin-top:4px;">
+    <div class="cb bl-b"><div class="lbl bl">Absolute Path</div><div class="ct">Root থেকে পুরো ঠিকানা</div>
+      <div class="code"><span class="cn">Windows:</span>
+C:\Users\YourName\Projects\main.py
+<span class="cn">Mac/Linux:</span>
+/home/yourname/projects/main.py</div>
+    </div>
+    <div class="cb cl-b"><div class="lbl cl">Relative Path</div><div class="ct">এখান থেকে ঠিকানা</div>
+      <div class="code">main.py      <span class="cc">← same folder</span>
+./main.py    <span class="cc">← explicitly here</span>
+../other/f.py <span class="cc">← go up, then in</span></div>
+    </div>
+  </div>
+  <div class="imp"><div class="it">⚠️ Key Insight</div>Python বলে <span class="hl">FileNotFoundError</span> → প্রায় সবসময় ভুল path! Absolute vs Relative double-check করো।</div>
+
+  <hr class="dv">
+
+  <!-- Terminal -->
+  <div class="sh"><span class="num bg-cl">8</span><span class="cl">Terminal — টার্মিনাল Commands</span></div>
+  <table class="tbl">
+    <tr><th>কাজ</th><th>Mac/Linux</th><th>Windows CMD</th><th>কী করে</th></tr>
+    <tr><td>কোথায় আছি?</td><td><code>pwd</code></td><td><code>cd</code></td><td>current location দেখায়</td></tr>
+    <tr><td>File list</td><td><code>ls</code></td><td><code>dir</code></td><td>সব file/folder দেখায়</td></tr>
+    <tr><td>Folder-এ ঢোকো</td><td><code>cd Documents</code></td><td><code>cd Documents</code></td><td>folder navigate</td></tr>
+    <tr><td>পিছে যাও</td><td><code>cd ..</code></td><td><code>cd ..</code></td><td>এক ধাপ উপরে</td></tr>
+    <tr><td>নতুন folder</td><td><code>mkdir myapp</code></td><td><code>mkdir myapp</code></td><td>folder তৈরি</td></tr>
+    <tr><td>নতুন file</td><td><code>touch main.py</code></td><td><code>type nul > main.py</code></td><td>file তৈরি</td></tr>
+    <tr><td>VS Code</td><td><code>code .</code></td><td><code>code .</code></td><td>editor খোলো</td></tr>
+    <tr><td>Python চালাও</td><td><code>python main.py</code></td><td><code>python main.py</code></td><td>script run</td></tr>
+    <tr style="background:#fde8e0;"><td>⚠️ Delete file</td><td><code>rm file.txt</code></td><td><code>del file.txt</code></td><td>permanent! undo নেই</td></tr>
+    <tr style="background:#fde8e0;"><td>⚠️ Delete ALL</td><td><code>rm -rf folder/</code></td><td><code>rmdir /s /q</code></td><td>সব মুছে যাবে!</td></tr>
+  </table>
+  <div class="imp"><div class="it">🚀 Pro Workflow — মুখস্থ করো!</div>
+    <code style="font-size:12px;">cd Desktop → mkdir new_project → cd new_project → touch main.py → code .</code>
+  </div>
+
+  <hr class="dv">
+
+  <!-- Flowcharts -->
+  <div class="sh"><span class="num bg-gl">9</span><span class="gl">Flowcharts — ফ্লোচার্ট</span></div>
+  <div class="shape-row">
+    <div class="shp"><div class="si">⬭</div><div class="sn2">Oval</div><div class="sd2">START / END<br>প্রতিটিতে ঠিক একটি</div></div>
+    <div class="shp"><div class="si">▭</div><div class="sn2">Rectangle</div><div class="sd2">Process / Action<br>যেমন: count = count+1</div></div>
+    <div class="shp"><div class="si">◇</div><div class="sn2">Diamond</div><div class="sd2">Decision (Yes/No)<br>if/else-এ map হয়</div></div>
+    <div class="shp"><div class="si">▱</div><div class="sn2">Parallelogram</div><div class="sd2">Input / Output<br>input() / print()</div></div>
+  </div>
+
+  <div class="g2" style="margin-top:8px;">
+    <div>
+      <p style="font-size:13px;color:var(--ink2);margin-bottom:8px;"><strong>Number Guessing Game — Flowchart</strong></p>
+      <div class="fc">
+        <div class="fc-oval">START</div>
+        <div class="fc-ar">↓</div>
+        <div class="fc-para" style="transform:skewX(-8deg);">User types a guess</div>
+        <div class="fc-ar">↓</div>
+        <div class="fc-rect">count = count + 1</div>
+        <div class="fc-ar">↓</div>
+        <div class="fc-diam">guess == secret?</div>
+        <div class="fc-row">
+          <div style="text-align:center;">
+            <div class="fc-lb">YES ✅</div><div class="fc-ar">↓</div>
+            <div class="fc-rect">'Correct!'</div><div class="fc-ar">↓</div>
+            <div class="fc-oval">END</div>
+          </div>
+          <div style="text-align:center;margin-left:16px;">
+            <div class="fc-lb">NO ❌</div><div class="fc-ar">↓</div>
+            <div class="fc-rect">Too high / Too low</div>
+            <div class="fc-ar">↑ Loop</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;color:var(--ink2);margin-bottom:8px;"><strong>Game Trace — secret = 42</strong></p>
+      <table class="tbl">
+        <tr><th>Turn</th><th>Guess</th><th>Result</th></tr>
+        <tr><td>1</td><td>75</td><td class="cl">Too high! 🔴</td></tr>
+        <tr><td>2</td><td>20</td><td class="bl">Too low! 🔵</td></tr>
+        <tr><td>3</td><td>42</td><td class="gl">Correct! ✅</td></tr>
+      </table>
+      <div class="imp" style="margin-top:10px;"><div class="it">💡 কেন Flowchart?</div>Code লেখার আগে logic fix করো। Bug ধরতে flowchart আঁকো!</div>
+    </div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- Algorithms -->
+  <div class="sh"><span class="num bg-al">10</span><span class="al">Algorithms — অ্যালগরিদম</span></div>
+  <div class="g3">
+    <div class="cb al-b"><div class="lbl al">Definition</div><div class="ct">Algorithm কী?</div>
+      <p>Ordered, finite instructions যা একটি নির্দিষ্ট সমস্যা solve করে। শুরু, স্পষ্ট ধাপ ও শেষ থাকতে হবে।</p></div>
+    <div class="cb al-b"><div class="lbl al">Properties</div><div class="ct">ভালো Algorithm</div>
+      <p><strong>Correct</strong> · <strong>Efficient</strong> · <strong>Clear</strong> · <strong>Finite</strong> · <strong>General</strong></p></div>
+    <div class="cb al-b"><div class="lbl al">Real World</div><div class="ct">কোথায় আছে?</div>
+      <p>Google search · Spotify recommendations · GPS routing · Instagram feed — সব Algorithm!</p></div>
+  </div>
+
+  <div class="code" style="margin-top:10px;"><span class="cc"># Number Guessing Game — Full Algorithm</span>
+<span class="ck">import</span> random
+secret = random.randint(<span class="cn">1</span>, <span class="cn">100</span>)
+count  = <span class="cn">0</span>
+<span class="ck">while</span> <span class="ck">True</span>:
+    guess  = <span class="ck">int</span>(<span class="ck">input</span>(<span class="cs">"Guess 1-100: "</span>))
+    count += <span class="cn">1</span>
+    <span class="ck">if</span> guess == secret:
+        <span class="ck">print</span>(<span class="cs">f"Correct! Got it in {count} guesses!"</span>)
+        <span class="ck">break</span>
+    <span class="ck">elif</span> guess > secret:
+        <span class="ck">print</span>(<span class="cs">f"{guess} too high! Try lower."</span>)
+    <span class="ck">else</span>:
+        <span class="ck">print</span>(<span class="cs">f"{guess} too low! Try higher."</span>)</div>
+
+  <div class="imp"><div class="it">🏆 Golden Rule</div>প্রতিটি complex program = simple algorithm-এর সমষ্টি। বড় problem → ছোট ছোট ধাপে ভাগ করো!</div>
+</div>
+
+<!-- ══════════════════════ PART 3: SOFTWARE ENGINEERING ══════════════════════ -->
+<div class="nb">
+  <div class="sec-div">💼 Part 3 — Software Engineering</div>
+
+  <!-- SDLC -->
+  <div class="sh"><span class="num bg-pl">11</span><span class="pl">SDLC — Software Development Lifecycle</span></div>
+  <p style="font-size:13px;color:var(--ink2);margin-bottom:12px;">Software কীভাবে plan, create, test ও maintain করা হয় তার structured process।</p>
+
+  <div class="sdlc">
+    <div class="ph"><div class="ph-c" style="border-color:var(--teal);">🔍</div><div class="ph-n tl">Planning</div><div class="ph-s">Scope &<br>feasibility</div></div>
+    <div class="arr">→</div>
+    <div class="ph"><div class="ph-c" style="border-color:var(--blue);">📋</div><div class="ph-n bl">Requirements</div><div class="ph-s">What to<br>build</div></div>
+    <div class="arr">→</div>
+    <div class="ph"><div class="ph-c" style="border-color:var(--purple);">🏛️</div><div class="ph-n pl">Design</div><div class="ph-s">Architecture<br>& UX</div></div>
+    <div class="arr">→</div>
+    <div class="ph"><div class="ph-c" style="border-color:var(--amber);">💻</div><div class="ph-n al">Implement</div><div class="ph-s">Write<br>code</div></div>
+    <div class="arr">→</div>
+    <div class="ph"><div class="ph-c" style="border-color:var(--green);">✅</div><div class="ph-n gl">Testing</div><div class="ph-s">Verify &<br>validate</div></div>
+    <div class="arr">→</div>
+    <div class="ph"><div class="ph-c" style="border-color:var(--coral);">🚀</div><div class="ph-n cl">Deployment</div><div class="ph-s">Ship to<br>production</div></div>
+    <div class="arr">→</div>
+    <div class="ph"><div class="ph-c" style="border-color:var(--ink2);">🔧</div><div class="ph-n">Maintenance</div><div class="ph-s">Sustain &<br>improve</div></div>
+  </div>
+
+  <div class="g2" style="margin-top:12px;">
+    <div>
+      <p style="font-family:'Caveat',cursive;font-size:17px;font-weight:700;color:var(--coral);margin-bottom:8px;">Waterfall vs Agile vs Scrum</p>
+      <table class="tbl">
+        <tr><th>Model</th><th>Approach</th><th>Best For</th></tr>
+        <tr><td><span style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;" class="bl">Waterfall</span></td><td>Linear, no going back</td><td>Gov/regulatory</td></tr>
+        <tr><td><span style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;" class="tl">Agile</span></td><td>Iterative, flexible</td><td>Modern software</td></tr>
+        <tr><td><span style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;" class="cl">Scrum</span></td><td>Agile + defined roles</td><td>Product teams</td></tr>
+        <tr><td><span style="font-family:'Caveat',cursive;font-size:15px;font-weight:700;" class="pl">Kanban</span></td><td>Visual, continuous</td><td>Maintenance/ops</td></tr>
+      </table>
+    </div>
+    <div>
+      <p style="font-family:'Caveat',cursive;font-size:17px;font-weight:700;color:var(--green);margin-bottom:8px;">Scrum Artifacts</p>
+      <div class="cb gl-b">
+        <div class="sc-item"><span class="sc-key tl">Product Backlog</span><span style="font-size:13px;">সব features-এর prioritized list</span></div>
+        <div class="sc-item"><span class="sc-key bl">Sprint Backlog</span><span style="font-size:13px;">১-২ সপ্তাহে কী করবো</span></div>
+        <div class="sc-item"><span class="sc-key cl">Increment</span><span style="font-size:13px;">Sprint শেষে shippable product</span></div>
+        <div class="sc-item"><span class="sc-key al">Daily Stand-up</span><span style="font-size:13px;">১৫ মিনিট: কী করলাম/করবো/blocker?</span></div>
+        <div class="sc-item" style="border:none;"><span class="sc-key pl">Retrospective</span><span style="font-size:13px;">কী ভালো হলো? কী improve করবো?</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- AI Era -->
+  <div class="sh"><span class="num bg-pkl">12</span><span class="pkl">Software Engineering in the AI Era</span></div>
+  <div class="warn"><strong class="cl">⚠️ Important:</strong> GitHub Copilot, Cursor, Claude — engineers-দের replace করে না, <strong>amplify</strong> করে! AI code তোমাকেই বুঝতে, review করতে ও own করতে হবে।</div>
+  <div class="g4">
+    <div class="card"><div class="ci">🤝</div><div class="ct2 tl">AI Coding Partner</div><ul>
+      <li>Copilot/Cursor: autocomplete</li><li>Claude: debug/explain/review</li><li>AI boilerplate লেখে, তুমি architect</li><li>Prompt শেখো — নতুন skill!</li></ul></div>
+    <div class="card"><div class="ci">🧠</div><div class="ct2 bl">LLM-Powered Apps</div><ul>
+      <li>Apps-এ LLM feature হিসেবে</li><li>RAG: নিজের data থেকে answer</li><li>Streaming APIs, agentic</li><li>2025-এ optional নয়!</li></ul></div>
+    <div class="card"><div class="ci">👁️</div><div class="ct2 pl">Computer Vision</div><ul>
+      <li>Image classification, detection</li><li>Medical: X-rays, MRIs diagnose</li><li>Human perception-এর মতো</li><li>Classical CV + deep learning</li></ul></div>
+    <div class="card"><div class="ci">⚠️</div><div class="ct2 cl">Risks</div><ul>
+      <li>AI hallucinations — ভুল code</li><li>Security vulnerabilities</li><li>Fundamentals ছাড়া over-reliance</li><li>Prompt injection attacks</li></ul></div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- Responsibilities -->
+  <div class="sh"><span class="num bg-bl">13</span><span class="bl">Responsibilities of a Software Engineer</span></div>
+  <div class="g3">
+    <div class="card"><div class="ci">📋</div><div class="ct2 bl">Requirements Analysis</div><ul>
+      <li>Business needs → technical specs</li><li>Clients, PMs, stakeholders-এর সাথে যোগাযোগ</li><li>Code-এর আগে ambiguity চিহ্নিত</li><li>Functional & non-functional requirements</li></ul></div>
+    <div class="card"><div class="ci">🏛️</div><div class="ct2 tl">System Design & Architecture</div><ul>
+      <li>সঠিক tech stack বেছে নেওয়া</li><li>Databases, APIs, service boundaries</li><li>Scalability, availability, security</li><li>ERDs, sequence, class diagrams</li></ul></div>
+    <div class="card"><div class="ci">💻</div><div class="ct2 al">Implementation (Coding)</div><ul>
+      <li>Clean, readable, documented code</li><li>Coding standards follow করা</li><li>Algorithms & data structures</li><li>Git, version control, clear commits</li></ul></div>
+    <div class="card"><div class="ci">🧪</div><div class="ct2 gl">Testing & QA</div><ul>
+      <li>Unit, integration, e2e tests</li><li>Debug & resolve defects</li><li>Code reviews-এ participate</li><li>Edge cases & failure scenarios</li></ul></div>
+    <div class="card"><div class="ci">🚀</div><div class="ct2 cl">Deployment & DevOps</div><ul>
+      <li>CI/CD pipelines build করা</li><li>Docker containerize করা</li><li>AWS, GCP, Azure deploy</li><li>Production monitor, incidents respond</li></ul></div>
+    <div class="card"><div class="ci">🔧</div><div class="ct2 pl">Maintenance & Iteration</div><ul>
+      <li>Codebase refactor & improve</li><li>Bug reports & production issues</li><li>Performance optimize করা</li><li>Dependencies upgrade, technical debt</li></ul></div>
+  </div>
+
+  <div class="warn" style="margin-top:16px;">
+    <strong class="bl">🌏 Japan — Bridge SE Perspective:</strong> Japanese client team ও development team-এর মধ্যে communication code-এর মতোই গুরুত্বপূর্ণ। English ও Japanese-এ clearly requirements document করা এই market-এ unique ও valuable skill!
+  </div>
+</div>
+
+<!-- ══════════════════════ FINAL SUMMARY ══════════════════════ -->
+<div class="nb">
+  <div class="sec-div">📝 Master Summary — সব একনজরে</div>
+
+  <div class="g4" style="margin-top:10px;">
+    <div>
+      <div class="sh" style="font-size:16px;margin-bottom:8px;"><span class="num bg-tl" style="width:24px;height:24px;font-size:11px;">P</span><span class="tl">Python</span></div>
+      <ul style="font-size:12px;line-height:2;padding-left:16px;color:var(--ink2);">
+        <li><span class="hl">int/float/str</span> input types</li>
+        <li><span class="hl">if/elif/else</span> → শর্ত</li>
+        <li>Ternary → এক লাইন</li>
+        <li><span class="hl">and/or/not</span> operators</li>
+        <li><span class="hl">len/isalpha/endswith</span></li>
+        <li><span class="hl">round(x,2)</span> → টাকার হিসাব</li>
+        <li>x * 0.90 → 10% ছাড়</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sh" style="font-size:16px;margin-bottom:8px;"><span class="num bg-bl" style="width:24px;height:24px;font-size:11px;">F</span><span class="bl">File+Terminal</span></div>
+      <ul style="font-size:12px;line-height:2;padding-left:16px;color:var(--ink2);">
+        <li>Tree structure → Root</li>
+        <li>Absolute = পুরো path</li>
+        <li>Relative = এখান থেকে</li>
+        <li><span class="hl">pwd/ls</span> → where/what</li>
+        <li><span class="hl">mkdir/cd</span> → create/move</li>
+        <li><span class="hl">code .</span> → VS Code</li>
+        <li><span class="hl">rm</span> → সাবধান! permanent</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sh" style="font-size:16px;margin-bottom:8px;"><span class="num bg-gl" style="width:24px;height:24px;font-size:11px;">A</span><span class="gl">Flow+Algo</span></div>
+      <ul style="font-size:12px;line-height:2;padding-left:16px;color:var(--ink2);">
+        <li>⬭ Oval = START/END</li>
+        <li>▭ Rectangle = Process</li>
+        <li>◇ Diamond = Decision</li>
+        <li>▱ Parallelogram = I/O</li>
+        <li>Code আগে Flowchart!</li>
+        <li>Algorithm = ordered steps</li>
+        <li>ছোট ধাপে ভাগ করো</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sh" style="font-size:16px;margin-bottom:8px;"><span class="num bg-pl" style="width:24px;height:24px;font-size:11px;">S</span><span class="pl">SE+AI</span></div>
+      <ul style="font-size:12px;line-height:2;padding-left:16px;color:var(--ink2);">
+        <li>SDLC = 7 phases</li>
+        <li>Waterfall/Agile/Scrum</li>
+        <li>6 SE responsibilities</li>
+        <li>AI amplifies, not replaces</li>
+        <li>AI code নিজে বোঝো</li>
+        <li>Hallucination সম্পর্কে সচেতন</li>
+        <li>Japan: Bridge SE skill!</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="imp" style="margin-top:18px;">
+    <div class="it">🎯 Practice Checklist</div>
+    <div style="font-size:13px;line-height:2.1;margin-top:6px;">
+      ☐ Python: 30টি homework problem solve করো<br>
+      ☐ Terminal: <span class="hl">mkdir → cd → touch → code .</span> workflow practice করো<br>
+      ☐ Flowchart: Number Guessing Game কাগজে আঁকো<br>
+      ☐ SDLC: ৭টি phase ক্রমানুসারে বলতে পারো?<br>
+      ☐ AI: একটি project-এ Copilot/Claude ব্যবহার করে দেখো
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
