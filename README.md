@@ -1,16 +1,5 @@
 # 📓 Complete Study Notes
 ### Python · Developer's Toolkit · Software Engineering
- 
----
- 
-## 📚 Table of Contents
- 
-- [Part 1 — Python Basics](#part-1--python-basics)
-- [Part 2 — Developer's Toolkit](#part-2--developers-toolkit)
-- [Part 3 — Software Engineering](#part-3--software-engineering)
-- [Master Summary](#master-summary)
----
- 
 ## 🐍 Part 1 — Python Basics
  
 ### 01. input() — তথ্য নেওয়া
@@ -424,20 +413,6 @@ while True:
 ### Software Engineering + AI
 - SDLC = 7 phases
 - Waterfall / Agile / Scrum / Kanban
-- 6 SE core responsibilities
-- AI amplifies, not replaces engineers
-- AI code সবসময় নিজে বোঝো
-- Hallucination সম্পর্কে সচেতন থাকো
-- Japan: Bridge SE skill অনেক valuable!
----
- 
-## 🎯 Practice Checklist
- 
-- [ ] Python: 30টি homework problem solve করো
-- [ ] Terminal: `mkdir → cd → touch → code .` workflow practice করো
-- [ ] Flowchart: Number Guessing Game কাগজে আঁকো
-- [ ] SDLC: ৭টি phase ক্রমানুসারে মুখে বলতে পারো?
-- [ ] AI: একটি project-এ Copilot/Claude ব্যবহার করে দেখো
----
+
  
 *Complete Study Notes — Python · Developer's Toolkit · Software Engineering*
