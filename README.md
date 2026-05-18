@@ -111,7 +111,19 @@ not False       = True   ✅
 ```
  
 ---
- 
+ Method / Command	Description	Example Syntax	Modifies Original?
+append()	Adds an item to the end	list.append(item)	✅ Yes
+insert()	Inserts an item at index	list.insert(index, item)	✅ Yes
+extend()	Appends another collection	list.extend(another_list)	✅ Yes
+remove()	Deletes first matching value	list.remove(value)	✅ Yes
+pop()	Removes & returns item at index	item = list.pop(index)	✅ Yes
+del	Deletes item or slice at index	del list[index]	✅ Yes
+index()	Returns index of first match	list.index(value)	❌ No
+count()	Counts occurrences of value	list.count(value)	❌ No
+sort()	Sorts list (Low to High)	list.sort()	✅ Yes
+sort(reverse=True)	Sorts list (High to Low)	list.sort(reverse=True)	✅ Yes
+max()	Returns highest value	max(list)	❌ No
+min()	Returns lowest value	min(list)	❌ No
 ### 05. String Methods — লেখা নিয়ে কাজ
  
 | Method | কাজ | উদাহরণ | Result |
