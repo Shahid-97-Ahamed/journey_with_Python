@@ -100,13 +100,133 @@ not False       = True   ✅
 ```
  
 ---
-### Summary of what is included inside the README:
-* **Adding Elements:** `append()`, `insert()`, and `extend()`
-* **Removing Elements:** `remove()`, `pop()`, and `del`
-* **Slicing:** `[start:stop:step]` syntax with examples on how to reverse sequences.
-* **Searching:** `index()` and `count()`
-* **Sorting & Metrics:** `sort()`, `sort(reverse=True)` for High-to-Low ordering, alongside global `max()` and `min()` functions.
-* **Quick Reference Table:** A concise cheat-sheet mapping each method, its behavior, and whether or not it mutates the original list.
+## append()
+Meaning: Add item at the end of list.
+
+```python
+fruits = ["Apple"]
+fruits.append("Orange")
+```
+
+---
+
+## insert()
+Meaning: Add item at specific position.
+
+```python
+numbers = [1, 3]
+numbers.insert(1, 2)
+```
+
+---
+
+## remove()
+Meaning: Remove specific item.
+
+```python
+colors = ["Red", "Blue"]
+colors.remove("Blue")
+```
+
+---
+
+## pop()
+Meaning: Remove item using index.
+
+```python
+names = ["Rin", "Sam"]
+names.pop(0)
+```
+
+---
+
+## del
+Meaning: Delete item from list.
+
+```python
+numbers = [10, 20, 30]
+del numbers[1]
+```
+
+---
+
+## extend()
+Meaning: Add multiple items.
+
+```python
+a = [1, 2]
+a.extend([3, 4])
+```
+
+---
+
+## count()
+Meaning: Count total same values.
+
+```python
+numbers = [1, 2, 2]
+numbers.count(2)
+```
+
+---
+
+## index()
+Meaning: Find item position.
+
+```python
+fruits = ["Apple", "Banana"]
+fruits.index("Banana")
+```
+
+---
+
+## sort()
+Meaning: Sort low to high.
+
+```python
+numbers = [3, 1, 2]
+numbers.sort()
+```
+
+---
+
+## sort(reverse=True)
+Meaning: Sort high to low.
+
+```python
+numbers = [3, 1, 2]
+numbers.sort(reverse=True)
+```
+
+---
+
+## slicing
+Meaning: Get specific part of list.
+
+```python
+numbers = [10, 20, 30, 40]
+print(numbers[1:3])
+```
+
+---
+
+## max()
+Meaning: Find highest value.
+
+```python
+numbers = [5, 8, 2]
+max(numbers)
+```
+
+---
+
+## min()
+Meaning: Find lowest value.
+
+```python
+numbers = [5, 8, 2]
+min(numbers)
+```
 ### 05. String Methods — লেখা নিয়ে কাজ
  
 | Method | কাজ | উদাহরণ | Result |
