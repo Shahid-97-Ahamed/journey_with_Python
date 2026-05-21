@@ -1,16 +1,5 @@
 # 📓 Complete Study Notes
 ### Python · Developer's Toolkit · Software Engineering
- 
----
- 
-## 📚 Table of Contents
- 
-- [Part 1 — Python Basics](#part-1--python-basics)
-- [Part 2 — Developer's Toolkit](#part-2--developers-toolkit)
-- [Part 3 — Software Engineering](#part-3--software-engineering)
-- [Master Summary](#master-summary)
----
- 
 ## 🐍 Part 1 — Python Basics
  
 ### 01. input() — তথ্য নেওয়া
@@ -111,7 +100,133 @@ not False       = True   ✅
 ```
  
 ---
- 
+## append()
+Meaning: Add item at the end of list.
+
+```python
+fruits = ["Apple"]
+fruits.append("Orange")
+```
+
+---
+
+## insert()
+Meaning: Add item at specific position.
+
+```python
+numbers = [1, 3]
+numbers.insert(1, 2)
+```
+
+---
+
+## remove()
+Meaning: Remove specific item.
+
+```python
+colors = ["Red", "Blue"]
+colors.remove("Blue")
+```
+
+---
+
+## pop()
+Meaning: Remove item using index.
+
+```python
+names = ["Rin", "Sam"]
+names.pop(0)
+```
+
+---
+
+## del
+Meaning: Delete item from list.
+
+```python
+numbers = [10, 20, 30]
+del numbers[1]
+```
+
+---
+
+## extend()
+Meaning: Add multiple items.
+
+```python
+a = [1, 2]
+a.extend([3, 4])
+```
+
+---
+
+## count()
+Meaning: Count total same values.
+
+```python
+numbers = [1, 2, 2]
+numbers.count(2)
+```
+
+---
+
+## index()
+Meaning: Find item position.
+
+```python
+fruits = ["Apple", "Banana"]
+fruits.index("Banana")
+```
+
+---
+
+## sort()
+Meaning: Sort low to high.
+
+```python
+numbers = [3, 1, 2]
+numbers.sort()
+```
+
+---
+
+## sort(reverse=True)
+Meaning: Sort high to low.
+
+```python
+numbers = [3, 1, 2]
+numbers.sort(reverse=True)
+```
+
+---
+
+## slicing
+Meaning: Get specific part of list.
+
+```python
+numbers = [10, 20, 30, 40]
+print(numbers[1:3])
+```
+
+---
+
+## max()
+Meaning: Find highest value.
+
+```python
+numbers = [5, 8, 2]
+max(numbers)
+```
+
+---
+
+## min()
+Meaning: Find lowest value.
+
+```python
+numbers = [5, 8, 2]
+min(numbers)
+```
 ### 05. String Methods — লেখা নিয়ে কাজ
  
 | Method | কাজ | উদাহরণ | Result |
@@ -418,20 +533,6 @@ while True:
 ### Software Engineering + AI
 - SDLC = 7 phases
 - Waterfall / Agile / Scrum / Kanban
-- 6 SE core responsibilities
-- AI amplifies, not replaces engineers
-- AI code সবসময় নিজে বোঝো
-- Hallucination সম্পর্কে সচেতন থাকো
-- Japan: Bridge SE skill অনেক valuable!
----
- 
-## 🎯 Practice Checklist
- 
-- [ ] Python: 30টি homework problem solve করো
-- [ ] Terminal: `mkdir → cd → touch → code .` workflow practice করো
-- [ ] Flowchart: Number Guessing Game কাগজে আঁকো
-- [ ] SDLC: ৭টি phase ক্রমানুসারে মুখে বলতে পারো?
-- [ ] AI: একটি project-এ Copilot/Claude ব্যবহার করে দেখো
----
+
  
 *Complete Study Notes — Python · Developer's Toolkit · Software Engineering*
