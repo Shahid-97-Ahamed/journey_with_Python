@@ -1,3 +1,4 @@
-fruits =["Apple","banana"]
-fruits.append("dim")
-print(fruits)
+# fruits =["Apple","banana"]
+# fruits.append("dim")
+# print(fruits)
+fruits =[]
