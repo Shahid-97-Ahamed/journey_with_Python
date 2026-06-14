@@ -63,3 +63,73 @@
 #         total = total + i
 # print(f"Sum of even numbers from 1 to {N} is: {total}")
 
+
+# ----------------------while loop---------------------------------------
+
+# for লুপ ব্যবহার হয় যখন জানো কতবার ঘুরতে হবে। 
+# কিন্তু যদি না জানো কতবার লাগবে — শুধু জানো কোন শর্তে থামতে হবে? তখন while
+
+# count = 1
+
+# while count <= 5:
+#     print(count)
+#     count += 1
+
+# pin = 1234
+# count = 1
+# while True:
+#     users_pin =int(input("Enter Your Pin: "))
+#     if  users_pin == pin:
+#         print("Welcome!")
+#         break
+#     else:
+#         print("Try again")
+#         count += 1
+
+
+# ----------------------------------------------------------
+
+# -------------------------------------List--------------------------------
+
+# numbers = [10, 25, 8, 42, 16]    # বর্গ বন্ধনীতে, কমা দিয়ে আলাদা
+
+# for num in numbers:
+#     print(num)      
+# len(numbers)   # প্রতিটা সংখ্যা একে একে আসবে
+
+
+# numbers = [12, 45, 7, 89, 23, 56]
+# largest = numbers[0]          # ধরে নিলাম প্রথমটাই সবচেয়ে বড়
+
+# for num in numbers:
+#     if num > largest:             # এই সংখ্যা কি এখনকার largest এর চেয়ে বড়?
+#         largest =num      # হ্যাঁ হলে, একেই largest বানাও
+
+# print(f"The largest number is: {largest}")    # print লুপের বাইরে!
+
+queue=[]
+while True:
+    type=input ("Enter (add/emergency/next/quit): ")
+    if type =="add":
+        patient = input("P_Name:")
+        queue.append(patient)
+        print("Queue", queue)
+    elif type =="emergency":
+        patient=input("P_Name:")
+        queue.insert(0,patient)
+        print("Queue:", queue)
+    elif type =="next":
+        if len(queue)>0:
+            patient=queue.pop(0)
+            print("Calling: ",patient)
+            print("Queue: ", queue)
+        else:
+            print("No patiaent waiting.")
+    elif type =="quit":
+        print ("Exit")
+        break
+    else:
+        print("Type Invalid")
+
+
+
