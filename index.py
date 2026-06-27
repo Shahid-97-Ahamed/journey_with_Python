@@ -107,29 +107,116 @@
 
 # print(f"The largest number is: {largest}")    # print লুপের বাইরে!
 
-queue=[]
-while True:
-    type=input ("Enter (add/emergency/next/quit): ")
-    if type =="add":
-        patient = input("P_Name:")
-        queue.append(patient)
-        print("Queue", queue)
-    elif type =="emergency":
-        patient=input("P_Name:")
-        queue.insert(0,patient)
-        print("Queue:", queue)
-    elif type =="next":
-        if len(queue)>0:
-            patient=queue.pop(0)
-            print("Calling: ",patient)
-            print("Queue: ", queue)
-        else:
-            print("No patiaent waiting.")
-    elif type =="quit":
-        print ("Exit")
-        break
-    else:
-        print("Type Invalid")
+# queue=[]
+# while True:
+#     type=input ("Enter (add/emergency/next/quit): ")
+#     if type =="add":
+#         patient = input("P_Name:")
+#         queue.append(patient)
+#         print("Queue", queue)
+#     elif type =="emergency":
+#         patient=input("P_Name:")
+#         queue.insert(0,patient)
+#         print("Queue:", queue)
+#     elif type =="next":
+#         if len(queue)>0:
+#             patient=queue.pop(0)
+#             print("Calling: ",patient)
+#             print("Queue: ", queue)
+#         else:
+#             print("No patiaent waiting.")
+#     elif type =="quit":
+#         print ("Exit")
+#         break
+#     else:
+#         print("Type Invalid")
 
+name ="Ahamed Shahid"
+# print(name.find("A"))
+# print(name.replace("Aha","Rabbi"))
+
+# print(5//2)
+# print(5252%2252)
+# print(10**5)
+
+votes =["Abdul","Babor","Abdulla","Abdul"]
+# Square brackets [ ] create a list
+cart = ["milk", "bread", "eggs", "milk"]  # duplicates OK!
+# print(cart)
+# print(len(cart))  # 4
+
+fruits = ["apple", "banana", "cherry", "mango"]
+# print(fruits[0])    # "apple"  ← first
+# print(fruits[-1])   # "mango"  ← last
+# print(fruits[1:3])  # ["banana","cherry"] ← slice
+
+# fruits = ["apple", "banana", "cherry"]
+# fruits[1] = "orange"  # replace banana
+# print(fruits)  # ["apple", "orange", "cherry"]
+
+# fruits = ["apple", "banana"]
+
+# fruits.append("cherry")    # add to END — most common
+# print(fruits)  # ["apple","banana","cherry"]
+
+# fruits.insert(1, "mango")   # add at position 1
+# print(fruits)  # ["apple","mango","banana","cherry"]
+
+# more = ["grape", "kiwi"]
+# fruits.extend(more)           # add ALL items from another list
+
+fruits = ["apple", "banana", "cherry", "banana"]
+
+fruits.remove("banana")  # removes FIRST match
+fruits.pop(0)             # removes by index, returns it
+del fruits[0]             # delete by index
+fruits.clear()            # wipe everything → []
+
+students = ["Alice", "Bob", "Carol"]
+
+# for student in students:
+#     print(f"Hello, {student}!")
+
+# # With index number
+# for i, student in enumerate(students):
+#     print(f"{i+1}. {student}")  # 1. Alice  2. Bob  3. Carol
+
+# Old way (3 lines)
+# squares = []
+# for x in range(1, 6):
+#     squares.append(x**2)
+
+# # List comprehension (1 line!)
+# squares = [x**2 for x in range(1, 6)]
+# print(squares)  # [1, 4, 9, 16, 25]
+
+# # With a filter — only even numbers
+# evens = [x for x in range(1, 11) if x % 2 == 0]
+# print(evens)    # [2, 4, 6, 8, 10]
+
+# # Transform — uppercase all names
+# names = ["alice", "bob"]
+# upper = [n.upper() for n in names]  # ["ALICE","BOB"]
+
+# **********************Arrange items in alphabetical or numerical order********************
+nums =[3, 1, 4, 1, 5, 9]
+fruits =["banana", "apple", "cherry"]
+
+nums.sort()# sorts IN PLACE → [1,1,3,4,5,9]
+# print(nums)
+nums.sort(reverse=True)# descending → [9,5,4,3,1,1]
+# print(nums)
+
+#  sorted() keeps original unchanged, returns new list
+
+result =sorted(fruits)
+# print(result)# ["apple","banana","cherry"]
+# print(fruits)# ["banana","apple","cherry"] ← unchanged!
+
+scores =[1,2,1,2,5,1,5,2,6,1,5,8]
+scores.sort(reverse=True)
+# print(f"The winner is {scores[0]}")
+
+# *******************************Tuples******************************************
 
 
