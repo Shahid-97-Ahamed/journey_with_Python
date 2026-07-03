@@ -376,5 +376,5 @@ school = {
 
 # print(school["s1"]["name"])
 
-for sid, info in school.items():
-    print(f"{info["name"]} got {info["grade"]}")
+# for sid, info in school.items():
+#     print(f"{info["name"]} got {info["grade"]}")
