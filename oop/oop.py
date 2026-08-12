@@ -82,17 +82,27 @@
 
 # 05.ATM Withdrawal Attempts
 
-correct_pin =1234
-attemps = 3
+# correct_pin =1234
+# attemps = 3
 
-while attemps > 0:
-    users_pin =int(input("Enter Your pin: "))
-    if users_pin == correct_pin:
-        print("Access granted")
-        break
-    else:
-        attemps = attemps - 1
-        print(f"You have {attemps} attemps left")
+# while attemps > 0:
+#     users_pin =int(input("Enter Your pin: "))
+#     if users_pin == correct_pin:
+#         print("Access granted")
+#         break
+#     else:
+#         attemps = attemps - 1
+#         print(f"You have {attemps} attemps left")
 
-else:
-    print("Card blocked")
+# else:
+#     print("Card blocked")
+
+# 06. Konbini Shopping List
+
+items = ["onigiri", "tea", "bento"]
+items.append("pudding")
+items.remove("tea")
+
+for i,item in enumerate(items,1):
+    print(f"{i}.{item}")
+
