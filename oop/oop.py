@@ -31,10 +31,19 @@
 
 # Basic Fundamentan python Problems
 
-# 1.elf Introduction Card
+# 1.Self Introduction Card
 
-name ="Shahid"
-age = 32
-city ="Kagoshima"
+# name ="Shahid"
+# age = 32
+# city ="Kagoshima"
 
-print(f"My name is {name}, I am {age} years old, and I live in {city}.")
+# print(f"My name is {name}, I am {age} years old, and I live in {city}.")
+
+
+# 2.Suica Card Balance Check
+
+balance = int(input("Input your balance: "))
+train_fare = 410
+
+status ="You can board the train" if balance >= train_fare  else "Insufficient balance"
+print(status)
