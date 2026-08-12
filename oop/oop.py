@@ -108,10 +108,23 @@
 
 # 07. Name Formatter
 
-full_name = " tanaka yuki "
+# full_name = " tanaka yuki "
 
-cleaned_name =full_name.strip().title()
+# cleaned_name =full_name.strip().title()
 
-print(cleaned_name)
+# print(cleaned_name)
+
+# ------------------------------------------------------------------------------
+
+# 08. Vending Machine Dictionary
+
+vending = {"cola": 150, "water": 120, "coffee": 130}
+
+item =str(input("Enter Your Item: ")).lower()
+if item in vending:
+    print(vending[item])
+else:
+    print("Item not available")
+
 
 
