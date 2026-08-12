@@ -63,13 +63,19 @@
 
 # another way to solve 
 
-age =int(input("Enter Your Age: "))
+# age =int(input("Enter Your Age: "))
 
-if age in range(0,12):
-    print("Child")
-elif  age in range(12,23):
-    print("Student")
-elif age in range(23,65):
-    print("Adult")
-else:
-    print("Senior")
+# if age in range(0,12):
+#     print("Child")
+# elif  age in range(12,23):
+#     print("Student")
+# elif age in range(23,65):
+#     print("Adult")
+# else:
+#     print("Senior")
+
+# 04.Shinkansen Countdown
+
+for i in range(10,0,-1):
+        print(i)
+print("Departing Tokyo Station!")
