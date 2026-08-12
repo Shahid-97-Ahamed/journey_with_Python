@@ -99,10 +99,19 @@
 
 # 06. Konbini Shopping List
 
-items = ["onigiri", "tea", "bento"]
-items.append("pudding")
-items.remove("tea")
+# items = ["onigiri", "tea", "bento"]
+# items.append("pudding")
+# items.remove("tea")
 
-for i,item in enumerate(items,1):
-    print(f"{i}.{item}")
+# for i,item in enumerate(items,1):
+#     print(f"{i}.{item}")
+
+# 07. Name Formatter
+
+full_name = " tanaka yuki "
+
+cleaned_name =full_name.strip().title()
+
+print(cleaned_name)
+
 
