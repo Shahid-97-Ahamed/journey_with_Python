@@ -42,8 +42,34 @@
 
 # 2.Suica Card Balance Check
 
-balance = int(input("Input your balance: "))
-train_fare = 410
+# balance = int(input("Input your balance: "))
+# train_fare = 410
 
-status ="You can board the train" if balance >= train_fare  else "Insufficient balance"
-print(status)
+# status ="You can board the train" if balance >= train_fare  else "Insufficient balance"
+# print(status)
+
+# 3.Train Fare Category
+
+# age =int(input("Enter Your Age: "))
+
+# if 0<= age < 12:
+#     print("Child")
+# elif 12<= age <= 22:
+#     print("Student")
+# elif 23<= age <=64:
+#     print("Adult")
+# else:
+#     print("Senior")
+
+# another way to solve 
+
+age =int(input("Enter Your Age: "))
+
+if age in range(0,12):
+    print("Child")
+elif  age in range(12,23):
+    print("Student")
+elif age in range(23,65):
+    print("Adult")
+else:
+    print("Senior")
