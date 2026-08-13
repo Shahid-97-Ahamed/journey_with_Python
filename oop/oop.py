@@ -162,11 +162,24 @@
 
 # 01. Your First Class
 
-class Konbini:
-   name ="Lawson"
+# class Konbini:
+#    name ="Lawson"
 
-store =Konbini()
-print(store.name)
+# store =Konbini()
+# print(store.name)
+
+# 02. Constructor Practice
+
+class Employee:
+    def __init__(self,name,hourly_wage):
+        self.name = name
+        self.hourly_wage =hourly_wage
+
+first_person =Employee("Yuki",1061)
+second_person =Employee("Kenta",1260)
+
+print(first_person.name,first_person.hourly_wage)
+print(second_person.name,second_person.hourly_wage)
 
 
 
