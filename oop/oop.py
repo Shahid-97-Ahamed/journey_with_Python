@@ -146,15 +146,27 @@
 
 # 10.Osaka Weekly Temperature
 
-temps = [28, 31, 27, 33, 30, 29, 32]
+# temps = [28, 31, 27, 33, 30, 29, 32]
 
-highest =max(temps)
-lowest =min(temps)
-average =round(sum(temps)/len(temps),2)
+# highest =max(temps)
+# lowest =min(temps)
+# average =round(sum(temps)/len(temps),2)
 
-print(highest)
-print(lowest)
-print(average)
+# print(highest)
+# print(lowest)
+# print(average)
+
+# ---------------------------------------------------
+
+# -------------------OOP(Object oriented Programming)-------------------
+
+# 01. Your First Class
+
+class Konbini:
+   name ="Lawson"
+
+store =Konbini()
+print(store.name)
 
 
 
