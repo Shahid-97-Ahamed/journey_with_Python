@@ -130,15 +130,32 @@
 
 # 09. Consumption Tax function
 
-def calculate_total(price):
-    price =round(price *1.10,2)
-    return price
+# def calculate_total(price):
+#     price =round(price *1.10,2)
+#     return price
 
-result=calculate_total(250)
-result2=calculate_total(560)
-result3=calculate_total(1290)
-print(result)
-print(result2)
-print(result3)
+# result=calculate_total(250)
+# result2=calculate_total(560)
+# result3=calculate_total(1290)
+# print(result)
+# print(result2)
+# print(result3)
+
+
+# --------------------------------------------------------------
+
+# 10.Osaka Weekly Temperature
+
+temps = [28, 31, 27, 33, 30, 29, 32]
+
+highest =max(temps)
+lowest =min(temps)
+average =round(sum(temps)/len(temps),2)
+
+print(highest)
+print(lowest)
+print(average)
+
+
 
 
